@@ -8,7 +8,7 @@
 			this.width = width;
 			this.height = 0;
 			this.brightnessValue = 2;
-			this.src = 'main/1.jpg';
+			this.src = '1.jpg';
 			
 			this.draw = () => {
 				let img = new Image();
