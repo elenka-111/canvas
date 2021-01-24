@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Увеличение яркости изображения посредством js и canvas</title>
+        <meta charset='utf-8' />
+		<style>
+			.app{display: flex;justify-content: space-around;}
+			.block{}
+			.block__title{font-size:25px;}
+			.block__row{width:100%;margin:20px 0;}
+			.option{}
+			.option__title{font-size: 18px;margin-bottom:10px;}
+			.option__input{width:100%;margin-top:10px;}
+			.option__input{width:100%;margin-top:10px;padding:7px;box-sizing: border-box;;}
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<div class="block">
+				<p class="block__title">Начальное изображение</p>
+				<canvas id='canvas1'>Начальное изображение</canvas>
+			</div>
+			<div class="block">
+				<p class="block__title">Настраиваемые параметры</p>
+				<div class="block__row option">
+					<label class="option__title">Выбор изображения</label>
+					<select class="option__input" onchange="getImage(this);">
+						<option value="/1.jpg">Природа</option>
+						<option value="/2.jpg">Река</option>
+						<option value="/3.jpg">Маки</option>
+					</select>
+				</div>
+				<div  class="block__row">
+					<label class="option__title">Регулировка яркости</label>
+					<input class="option__input" name="brValue" type="range" min="1" max="10" value="2" step="1" onchange="getbrValue(this);"/>
+				</div>
+			</div>
+			<div class="block">
+				<p  class="block__title">С увеличенной яркостью</p>
+				<canvas id='canvas2'>Отфильтрованное</canvas>
+			</div>
+		</div>
+		<script type="text/javascript" src="/code.js"></script>
+	</body>
+</html>
